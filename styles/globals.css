@@ -1,26 +1,112 @@
-html,
-body {
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200;300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;900&family=Mulish:wght@700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --red: #e0565b;
+  --yellow: #ffffd6;
+  --dark: #2e2e48;
+  --brown: #3f3f1a;
+  --light: #fafafc;
+  --gray: #efeff5;
+  --white: #fff;
+  --sidepadding: 3rem;
+  --maxWidth: 40%;
+  --containerWidth: 1200px;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+}
+
+@media (max-width: 36rem) {
+  :root {
+    --sadPadding: 1.5rem;
+    --maxWidth: 100%;
   }
-  body {
-    color: white;
-    background: black;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .btn {
+    font-size: 1rem;
+    pading: 0.5rem 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
   }
 }
+
+@media (min-width: 48rem) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 81rem) {
+  html {
+    font-size: 18px;
+  }
+  section:not(.hero) {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-nightblue text-white;
+  }
+}
+
+@layer components {
+  li {
+    @apply px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200;
+  }
+}
+
+/* #000000, opacity 0%
+#ffffff, opacity 10.0%
+#ffffff, opacity 50.0% */
+/* 
+black: #000000
+
+darkpurple: #000022
+
+pink: #e0565b
+
+whitish: #fafafc
+
+vanilla: #ffffd6
+
+violet: #1e1e38
+
+purp: #2e2e48
+
+sewer: #3f3f1a
+
+#000000, opacity 0% */

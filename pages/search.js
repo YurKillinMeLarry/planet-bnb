@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import Header from '../components/Header'
 
-export default function Home() {
+export default function Search() {
   return (
     <>
       <Header />
